@@ -230,7 +230,11 @@ async function carregarDashboard() {
         dadosUsuarios[r.nome] += Number(r.quantidade);
     });
 
-    trocarMeta(700, document.querySelector(".metaTab"));
+    trocarMeta(
+    700,
+    100000, // recompensa da meta 1 (coloca o valor certo)
+    document.querySelector(".metaTab")
+);
 }
 
 function trocarMeta(valorMeta, recompensa, elemento) {
@@ -527,4 +531,5 @@ function logout() {
 
 carregarMetaAtual();
 carregarDashboard();
+
 
