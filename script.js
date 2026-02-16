@@ -32,7 +32,7 @@ document.getElementById("drugForm").addEventListener("submit", async function(e)
     formData.append("image", image);
 
     try {
-        const response = await fetch("http://localhost:3000/api/drogas", {
+        const response = await fetch("https://metassampa.squareweb.app/api/drogas", {
             method: "POST",
             body: formData
         });
@@ -52,7 +52,7 @@ document.getElementById("drugForm").addEventListener("submit", async function(e)
     }
 });
 
-const API = "http://localhost:3000/api";
+const API = "https://metassampa.squareweb.app/api";
 let token = localStorage.getItem("token");
 
 // Se já estiver logado
@@ -105,7 +105,7 @@ async function login() {
     const gameId = document.getElementById("loginGameId").value;
     const senha = document.getElementById("loginPassword").value;
 
-    const response = await fetch("http://localhost:3000/api/login", {
+    const response = await fetch("https://metassampa.squareweb.app/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ gameId, senha })
@@ -141,7 +141,7 @@ async function carregarMeta() {
 
     try {
 
-        const response = await fetch("http://localhost:3000/api/meta-atual");
+        const response = await fetch("https://metassampa.squareweb.app/api/meta-atual");
         const meta = await response.json();
 
         if (!meta || !meta.ativa) {
@@ -161,7 +161,7 @@ async function carregarMeta() {
 
 async function atualizarDiasRestantesHistorico() {
 
-    const response = await fetch("http://localhost:3000/api/meta-atual");
+    const response = await fetch("https://metassampa.squareweb.app/api/meta-atual");
     const meta = await response.json();
 
     if (!meta || !meta.ativa) {
@@ -192,7 +192,7 @@ document.getElementById("historyBtn").addEventListener("click", carregarMeuHisto
 
 async function carregarMeuHistorico() {
 
-    const response = await fetch("http://localhost:3000/api/meus-registros", {
+    const response = await fetch("https://metassampa.squareweb.app/api/meus-registros", {
         headers: {
             "Authorization": "Bearer " + localStorage.getItem("token")
         }
@@ -210,7 +210,7 @@ async function carregarMeuHistorico() {
 
 async function carregarMeta() {
 
-    const response = await fetch("http://localhost:3000/api/meta-atual");
+    const response = await fetch("https://metassampa.squareweb.app/api/meta-atual");
     const meta = await response.json();
 
     if (!meta.ativa) {
@@ -316,7 +316,7 @@ function mostrarHistoricoMembro(registros) {
                             <td>${r.quantidade}</td>
                             <td>
                                 <button class="btnFoto"
-                                onclick="window.open('http://localhost:3000${r.imagem}')">
+                                onclick="window.open('https://metassampa.squareweb.app/${r.imagem}')">
                                     Ver Foto
                                 </button>
                             </td>
