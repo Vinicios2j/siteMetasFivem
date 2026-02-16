@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Login ADM</title>
+<style>
+body {
+    background: #111;
+    color: white;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box {
+    background: #222;
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #00ff88;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🔐 Login ADM</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+</div>
+
+<script>
+async function login() {
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    const response = await fetch("http://localhost:3000/api/admin/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+        localStorage.setItem("token", data.token);
+        alert("Login realizado!");
+        window.location.href = "historico.html";
+    } else {
+        alert(data.message);
+    }
+}
+</script>
+
+</body>
+</html>

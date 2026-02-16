@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.inputBox {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #ff0303;
+}
+
+.topButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btnAdmin {
+    width: 48%;
+    padding: 8px;
+    background: #ff4444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnAdmin:hover {
+    background: #cc0000;
+}
+
+.btnHistory {
+    width: 48%;
+    padding: 8px;
+    background: #4444ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnHistory:hover {
+    background: #2222cc;
+}
+
+/* CONTAINER AUTH */
+.authContainer {
+    width: 350px;
+    padding: 35px;
+    border-radius: 15px;
+    background: rgba(20, 20, 20, 0.9);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* TÍTULO */
+.authContainer h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* INPUTS */
+.authContainer input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #111;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.authContainer input:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 8px #ff0000;
+}
+
+/* BOTÕES */
+.authContainer button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #ff0000;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.authContainer button:hover {
+    background: #cc0000;
+    transform: scale(1.03);
+}
+
+/* TEXTO */
+.authContainer p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.authContainer span {
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.authContainer span:hover {
+    color: #ff0000;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CARD PRINCIPAL */
+.metaCard {
+    width: 700px;
+    margin: auto;
+    padding: 30px;
+    background: #111;
+    border-radius: 15px;
+    box-shadow: 0 0 30px red;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* TITULO */
+.metaCard h2 {
+    color: red;
+    text-shadow: 0 0 10px red;
+    margin-bottom: 20px;
+}
+
+/* META BOX */
+.metaBox {
+    margin-bottom: 20px;
+}
+
+.metaBox p {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+/* PROGRESS BAR */
+.progressBar {
+    width: 100%;
+    height: 15px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #550000 inset;
+}
+
+.progress {
+    height: 100%;
+    background: red;
+    box-shadow: 0 0 15px red;
+    transition: width 0.5s ease;
+}
+
+/* TOTAL */
+.metaCard h3 {
+    color: white;
+    margin-top: 20px;
+}
+
+/* TABELA */
+.tabelaMetas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabelaMetas th {
+    background: red;
+    color: black;
+    padding: 10px;
+}
+
+.tabelaMetas td {
+    padding: 8px;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+}
+
+.tabelaMetas tr:hover {
+    background: #330000;
+}
+
+/* BOTÃO FOTO */
+.btnFoto {
+    background: red;
+    border: none;
+    padding: 5px 10px;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btnFoto:hover {
+    background: #ff3333;
+}
+
+/* BOTÃO VOLTAR */
+.btnVoltar {
+    background: black;
+    border: 2px solid red;
+    color: red;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.btnVoltar:hover {
+    background: red;
+    color: black;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.tabelaWrapper {
+    max-height: 300px;
+    min-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+/* Scroll vermelho neon */
+.tabelaWrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tabelaWrapper::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.tabelaWrapper::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+    box-shadow: 0 0 10px red;
+}
+
+.contadorMeta {
+    background: #111;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 8px;
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px red;
+    font-weight: bold;
+}

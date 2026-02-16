@@ -1,0 +1,124 @@
+
+    body {
+    margin: 0;
+    background: #0f0f0f;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+header {
+    background: #181818;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.logoutBtn { background: crimson; color: white; }
+.histBtn { background: #007bff; color: white; margin-right: 10px; }
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* ABAS META */
+.metaTabs {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+}
+
+.metaTab {
+    padding: 10px 20px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.metaTab.active {
+    background: #00c853;
+    color: black;
+}
+
+.metaTab:hover {
+    background: #2a2a2a;
+}
+
+/* CONTAINER METAS */
+.metaContainer {
+    padding: 20px;
+}
+
+/* CARD USUÁRIO */
+.userCard {
+    background: #1a1a1a;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.userCard:hover {
+    background: #242424;
+}
+
+.userHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* BARRA PROGRESSO */
+.progressBar {
+    width: 100%;
+    background: #333;
+    height: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 10px;
+    background: linear-gradient(90deg, #00ff88, #00c853);
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+/* HISTÓRICO */
+#historicoContainer {
+    display: none;
+    padding: 20px;
+}
+
+.registro {
+    background: #1c1c1c;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registro button {
+    background: #00aa55;
+    color: white;
+    border-radius: 6px;
+}
+
+.metaBtn { background: orange; color: black; margin-right: 10px; }

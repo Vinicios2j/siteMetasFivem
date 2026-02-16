@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Drogas - FiveM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOGIN -->
+     <div style="position:absolute; top:20px; right:20px;">
+    <button id="adminLoginBtn">
+        🔐 ADM
+    </button>
+</div>
+<div class="authContainer" id="loginContainer">
+    <h2>🔐 Login</h2>
+
+    <input type="number" id="loginGameId" placeholder="ID do Jogo">
+    <input type="password" id="loginPassword" placeholder="Senha">
+
+    <button onclick="login()">Entrar</button>
+
+    <p>Não tem conta?
+        <span onclick="mostrarRegistro()" style="color:#00ff88;cursor:pointer;">
+            Registrar
+        </span>
+    </p>
+</div>
+
+
+<!-- REGISTRO -->
+<div class="authContainer" id="registerContainer" style="display:none;">
+    <h2>📝 Registro</h2>
+
+    <input type="text" id="regNome" placeholder="Nome e Sobrenome (jogo)">
+    <input type="number" id="regGameId" placeholder="ID do Jogo">
+    <input type="text" id="regDiscordId" placeholder="ID Discord">
+    <input type="password" id="regPassword" placeholder="Senha">
+
+    <button onclick="registrar()">Criar Conta</button>
+
+    <p>Já tem conta?
+        <span onclick="mostrarLogin()" style="color:#00ff88;cursor:pointer;">
+            Login
+        </span>
+    </p>
+</div>
+
+<div class="container" id="mainPanel" style="display:none;">
+    <h1>📦 Controle de Produção</h1>
+    <button onclick="logout()" style="margin-bottom: 5px;">Sair</button>
+
+        <div class="topButtons">
+            <button type="button" id="historyBtn" class="btnHistory">📜 Histórico</button>
+        </div>
+
+        <form id="drugForm">
+
+            <div class="inputBox">
+                <label>ID do Jogador</label>
+                <input type="number" id="playerId" required>
+            </div>
+
+            <div class="inputBox">
+                <label>Nome</label>
+                <input type="text" id="playerName" required>
+            </div>
+
+            <div class="inputBox">
+                <label>Tipo de Droga</label>
+                <select id="drugType" required>
+                    <option value="">Selecione</option>
+                    <option value="Maconha">Crack</option>
+                </select>
+            </div>
+
+            <div class="inputBox">
+                <label>Quantidade</label>
+                <input type="number" id="quantity" required>
+            </div>
+
+            <div class="inputBox">
+                <label>Print da Produção</label>
+                <input type="file" id="imageUpload" accept="image/*" required>
+            </div>
+
+            <button type="submit">Registrar</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

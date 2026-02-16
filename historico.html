@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard ADM</title>
+<link rel="stylesheet" href="styles/his.css">
+</head>
+<body>
+
+<header>
+    <h1>📊 Dashboard ADM</h1>
+    <div>
+        <button class="metaBtn" onclick="ativarMeta()">Ativar Meta Semanal</button>
+        <button class="histBtn" onclick="verRelatorio()">Verificar Conclusão</button>
+        <button class="histBtn" onclick="toggleHistorico()">Histórico</button>
+        <button class="logoutBtn" onclick="logout()">Logout</button>
+    </div>
+
+
+    <div class="metaControl">
+        <input type="datetime-local" id="dataInicioMeta">
+        <input type="datetime-local" id="dataFimMeta">
+        <button onclick="criarMetaPeriodo()">Criar Meta</button>
+    </div>
+
+    <div id="contadorMeta" style="padding:10px 20px;color:#00ff88;font-weight:bold;"></div>
+</header>
+
+<div id="relatorioContainer" style="display:none; padding:20px;"></div>
+
+<div id="dashboardArea">
+
+<div class="metaTabs">
+    <div class="metaTab active" onclick="trocarMeta(700, 413333, this)">
+        Meta 1<br><small>Recompensa: $413.333</small>
+    </div>
+    <div class="metaTab" onclick="trocarMeta(1050, 620000, this)">
+        Meta 2<br><small>Recompensa: $620.000</small>
+    </div>
+    <div class="metaTab" onclick="trocarMeta(2050, 1210476, this)">
+        Meta 3<br><small>Recompensa: $1.210.476</small>
+    </div>
+</div>
+
+<div class="metaContainer" id="metaContainer"></div>
+
+</div>
+
+<div id="historicoContainer">
+    <div style="margin-bottom:20px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+
+    <label>De:</label>
+    <input type="date" id="dataInicioFiltro">
+
+    <label>Até:</label>
+    <input type="date" id="dataFimFiltro">
+
+    <button onclick="filtrarPorPeriodo()" 
+            style="background:#00c853;color:black;">
+        Filtrar Período
+    </button>
+
+    <button onclick="carregarHistorico()" 
+            style="background:#444;color:white;">
+        Limpar Filtro
+    </button>
+
+</div>
+    <h2>📋 Lista de Registros</h2>
+    <div id="listaRegistros"></div>
+</div>
+
+<script src="scripts/his.js"></script>
+
+</body>
+</html>
