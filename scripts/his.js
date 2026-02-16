@@ -28,7 +28,7 @@ async function filtrarPorPeriodo() {
     const fim = new Date(fimInput);
     fim.setHours(23,59,59,999); // pega o dia inteiro
 
-    const response = await fetch("http://localhost:3000/api/registros", {
+    const response = await fetch("https://metassampa.squareweb.app/api/registros", {
         headers: { "Authorization": "Bearer " + token }
     });
 
@@ -210,7 +210,7 @@ let dadosUsuarios = {};
 
 async function carregarDashboard() {
 
-    const response = await fetch("http://localhost:3000/api/registros", {
+    const response = await fetch("https://metassampa.squareweb.app/api/registros", {
         headers: { "Authorization": "Bearer " + token }
     });
 
@@ -299,7 +299,7 @@ async function criarMetaPeriodo() {
 
     try {
 
-        const response = await fetch("http://localhost:3000/api/criar-meta", {
+        const response = await fetch("https://metassampa.squareweb.app/api/criar-meta", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -328,7 +328,7 @@ async function criarMetaPeriodo() {
 
 async function carregarMetaAtual() {
 
-    const response = await fetch("http://localhost:3000/api/meta-atual");
+    const response = await fetch("https://metassampa.squareweb.app/api/meta-atual");
 
     const meta = await response.json();
 
@@ -405,7 +405,7 @@ function atualizarMeta(totalAtual) {
 ================================ */
 async function carregarHistorico() {
 
-    const response = await fetch("http://localhost:3000/api/registros", {
+    const response = await fetch("https://metassampa.squareweb.app/api/registros", {
         headers: { "Authorization": "Bearer " + token }
     });
 
@@ -517,7 +517,7 @@ function toggleHistorico() {
 }
 
 function acessarFoto(caminho) {
-    window.open("http://localhost:3000" + caminho, "_blank");
+    window.open("https://metassampa.squareweb.app/" + caminho, "_blank");
 }
 
 function logout() {
@@ -527,3 +527,4 @@ function logout() {
 
 carregarMetaAtual();
 carregarDashboard();
+
